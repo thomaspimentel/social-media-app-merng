@@ -1,0 +1,24 @@
+{
+  "name": "social-media-app-merng",
+  "version": "1.0.0",
+  "description": "freeCodeCamp Social Media App to brush up on skills. MERNG Stack. https://www.youtube.com/watch?v=n1mdAPFq2Os",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": ">=2.0.0 <3.0.0",
+    "bcryptjs": "^2.4.3",
+    "graphql": ">=15.0.0 <16.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": ">=5.0.0 <6.0.0",
+    "nodemon": ">=2.0.0 <3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/thomaspimentel/social-media-app-merng/issues"
+  },
+  "homepage": "https://github.com/thomaspimentel/social-media-app-merng#readme"
+}

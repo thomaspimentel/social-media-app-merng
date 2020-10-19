@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+    db:
+        image: mongo
+        environment:
+            - MONGO_DATA_DIR=/usr/data/db
+            - MONGO_LOG_DIR=/dev/null
+        volumes:
+            - ./data/db:/usr/data/db
+        ports:
+            - "27017:27017"
+    backend:
+        build: ./backend
+        volumes:
+            - ./backend:/code
+            - /code/node_modules
+        ports:
+            - "5000:5000"
+        depends_on:
+            - db
+        environment:
+            - SECRET_KEY=skjfekafejhjdknfbjkfbsmfjnasdjkfbdskflnsdjvhudihdjfiosfd
+            - ENV=development
+            - PORT=5000
+            - DB=mongodb://db:27017/some-cool-name
