@@ -24,3 +24,13 @@ services:
             - ENV=development
             - PORT=5000
             - DB=mongodb://db:27017/some-cool-name
+    frontend:
+        image: node:14
+        stdin_open: true
+        ports:
+            - "3003:3003"
+        working_dir: /usr/src/app
+        volumes: 
+            - ./client:/usr/src/app
+            # - /usr/src/app/node_modules
+        command: bash -c "npm i && npm start"
